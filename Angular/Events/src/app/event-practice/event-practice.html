@@ -1,0 +1,10 @@
+<hr/>
+<h1>Your Username : {{username}} </h1>
+<input placeholder="Enter your name" type="text" (input)="getName($event)" name="username" id="username" value="{{username}}">
+<button (click)="setName('happy')">Set Name</button>
+<hr/>
+<hr/>
+<h1>Yout Email : {{email}} </h1>
+<input placeholder="Enter your email" type="text" name="username" id="username" value="{{email}}">
+<button (click)="setEmail('default@test.com')">Set Email</button>
+<hr/>
