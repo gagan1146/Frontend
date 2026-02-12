@@ -1,0 +1,21 @@
+<h1>Two way binding using ngModel</h1>
+{{name}}
+<input type="text" [(ngModel)]="name" name="name" id="name" value="{{name}}" placeholder="Enter your name">
+<input type="text" [(ngModel)]="name" name="name" id="name" value="{{name}}" placeholder="Enter your name">
+<hr/>
+<hr/>
+<app-dynamic-styling/>
+<hr/>
+<hr/>
+<app-directives/>
+<hr/>
+<hr/>
+<h1>Basics of Routing</h1>
+<p>/login to open Login Page</p>
+<p>/signup to open Signup Page</p>
+<a href="/login">Login</a>
+<br/>
+<a href="/signup">Signup</a>
+<hr/>
+<hr/>
+<router-outlet/>

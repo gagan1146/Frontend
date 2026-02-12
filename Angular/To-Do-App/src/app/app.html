@@ -1,0 +1,8 @@
+<h1>Your Todos appears here</h1>
+<input [(ngModel)]="task" type="text" name="task" id="task" value="task"/>
+<button (click)="addTask()">Add Task</button>
+@for(task of taskList; track $index; let i = $index){
+  <li><p>{{i+1}}</p></li>
+  <li><p>{{task}}</p></li>
+  <li><button (click)="deleteTask(i)">Delete</button></li>
+}
