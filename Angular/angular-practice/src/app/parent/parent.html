@@ -1,0 +1,9 @@
+<h1>It is Parent Component</h1>
+<p>Passing data of user from Parent to child via the dropdown</p>
+<select #selectedUser (change)="changeUserName(selectedUser.value)">
+    <option value="Peter">Peter</option>
+    <option value="Bruce">Bruce</option>
+    <option value="Sam">Sam</option>
+</select>
+<hr/>
+<app-child [user]="user"></app-child>

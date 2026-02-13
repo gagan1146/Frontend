@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { User } from '../service/user';
 
 interface Person { name: string; id: number; }
 
@@ -16,4 +17,8 @@ export class Home {
     {name:"alice",id:2},
     {name:"bob",id:3},
   ];
+  name:string="";
+  constructor(private user:User){
+      this.name = user.getName();
+  }
 }

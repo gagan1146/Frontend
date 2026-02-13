@@ -1,21 +1,21 @@
-import { Component } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { User } from '../service/user';
 
 @Component({
   selector: 'app-profile',
-  imports: [],
   templateUrl: './profile.html',
-  styleUrl: './profile.css',
+  styleUrls: ['./profile.css'],
 })
-export class Profile {
-  name:string=""
-  id:number|null=null
-  constructor(private route:ActivatedRoute){}
-  ngOnInit(){
-    this.route.queryParams.subscribe(param=>{this.name=param['name']}
-    );
-    this.route.params.subscribe(params => { this.id = +params['id']; 
-      this.name = params['name']; 
-    });
+export class Profile implements OnInit {
+  name: string = "";
+  email: string = "";
+  password: string = "";
+
+  constructor(private user: User) {}
+
+  ngOnInit() {
+    this.name = this.user.getName();
+    this.email = this.user.getEmail();
+    this.password = this.user.getPassword();
   }
 }
