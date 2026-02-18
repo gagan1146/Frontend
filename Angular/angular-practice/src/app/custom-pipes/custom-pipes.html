@@ -1,0 +1,7 @@
+<h1>Pipe Practice</h1>
+<p>Name : {{ name | UpperCasePipe }}</p>
+<p>GMAIL : {{ gmail | UpperCasePipe }}</p>
+<p>DOB : {{ dob }}</p>
+<button (click)="applyPipeOnName()">Transform Name using Custom Pipe</button>
+<button (click)="applyPipeOnGmail()">Transform Gmail using Custom Pipe</button>
+<button (click)="applyPipeOnDOB()">'Transform DOB using Date Pipe</button>

@@ -1,0 +1,29 @@
+<h1>Device Inventory</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Device Name</th>
+      <th>Part Number</th>
+      <th>Building Name</th>
+      <th>Device Type</th>
+      <th>Number of Shelves</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let device of devices">
+      <td>{{ device.id }}</td>
+      <td>{{ device.deviceName }}</td>
+      <td>{{ device.partNumber }}</td>
+      <td>{{ device.BuildingName }}</td>
+      <td>{{ device.DeviceType }}</td>
+      <td>{{ device.numberOfShelf }}</td>
+      <td>
+        <button (click)="updateDevice(device.id)">Update</button>
+        <button (click)="deleteDevice(device.id)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

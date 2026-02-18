@@ -1,0 +1,23 @@
+<nav>
+    <div class="left">
+        <h3>Device Inventory System</h3>
+    </div>
+
+    <div class="mid">
+        <a routerLink="/home">Home</a>
+        <a routerLink="/device/creation">Device Creation</a>
+        <a routerLink="/device/summary">Device Summary</a>
+        <a routerLink="/shelf/creation">Shelf Creation</a>
+        <a routerLink="/shelf/summary">Shelf Summary</a>
+    </div>
+
+    <div class="right">
+        <div class="right"> 
+            <img src="UserLogo.png" alt="UserLogo" (click)="toggleDropdown()" />
+            <div class="dropdown" *ngIf="dropdownOpen"> <ng-container *ngIf="isLoggedIn; else guestMenu"> <a
+                        (click)="goToProfile()">Profile</a> <a (click)="logout()">Logout</a> </ng-container>
+                <ng-template #guestMenu> <a (click)="login()">Login</a> <a (click)="signup()">Signup</a> </ng-template>
+            </div>
+        </div>
+    </div>
+</nav>
