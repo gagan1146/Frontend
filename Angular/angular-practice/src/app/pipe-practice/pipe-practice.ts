@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
 import { UpperCasePipe, DatePipe } from '@angular/common';
 import { LowerCasePipe } from '../custom-pipes/lower-case-pipe';
-import { CustomPipes } from '../custom-pipes/custom-pipes';
+// import { CustomPipes } from '../custom-pipes/custom-pipes';
 
 @Component({
   selector: 'app-pipe-practice',
   templateUrl: './pipe-practice.html',
   styleUrls: ['./pipe-practice.css'],
   providers: [UpperCasePipe, DatePipe,LowerCasePipe],
-  imports:[CustomPipes]
+  // imports:[CustomPipes]
 })
 export class PipePractice {
   name: string = "john cena";

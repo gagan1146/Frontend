@@ -1,0 +1,11 @@
+<h1>API PRACTICE</h1>
+@for(product of ProductData; track product.id){
+<ul>
+  <li>
+    {{ product.title }}
+    <button (click)="viewProduct(product)">View</button>
+  </li>
+</ul>
+}
+
+<pre>{{ ProductData | json }}</pre>
