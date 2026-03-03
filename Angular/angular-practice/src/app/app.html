@@ -24,3 +24,12 @@
 <app-parent></app-parent>
 <hr/>
 <hr/>
+
+<h1>INPUT BINDING</h1>
+<app-input-binding [message]="'Message from parent'"></app-input-binding>
+
+<hr><hr>
+
+<h1>OUTPUT BINDING</h1>
+<app-output-binding (notify)="handleNotification($event)"></app-output-binding>
+

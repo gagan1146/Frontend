@@ -16,4 +16,5 @@ export class Directives {
   toggleHeading(){
     this.block=(this.block+1)%5;
   }
+  // items:number[]=[1,2,3,4,5,6,7];
 }
